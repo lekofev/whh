@@ -1,0 +1,41 @@
+
+<div class="page nosotros">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_site clear_block">
+			<div class="columnas columna_central">
+
+				<h1 class="titulo_principal_perfil">
+					<span class="naranja">
+						<%= @_perfil[0]%>
+					</span>
+					<span class="beige">
+						<%= @_perfil[1]%>
+					</span>
+				</h1>
+				
+				<div class="textos sub_titulo">
+					<%= sanitize(@perfil.sub_titulo, :tags=>['br','strong','i','u','strong','p']) %>
+				</div>
+
+				<div class="imagen_contenido perfiles">
+					<img src="<%= @perfil.url_imagen %>" alt="">
+				</div>
+				<div class="textos">
+					<%= sanitize(@perfil.texto, :tags=>['br','strong','i','u','strong','p']) %>
+				</div>
+			</div>
+			<div class="columnas columna_lateral">
+				<%= render(:partial => "compartido/sidebar") %>
+			</div>
+
+		</div>
+	
+
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>

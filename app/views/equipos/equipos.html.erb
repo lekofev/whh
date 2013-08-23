@@ -1,0 +1,102 @@
+
+<div class="page nosotros">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_site clear_block">
+			<div class="columnas columna_central">
+
+				<h1 class="titulo_principal_perfil">
+					<span class="verde">
+						NUESTRO
+					</span>
+					<span class="beige">
+						EQUIPO
+					</span>
+				</h1>
+				
+				<div class="menu_equipo clear_block">
+					<ul>
+						<li>
+							<%= link_to("PERU / ECUADOR", {:controller => 'equipos', :id => 1}, :class => 'first') %>
+						</li>
+						<li>
+							<%= link_to("BOLIVIA", {:controller => 'equipos', :id => 2}, :class => '') %>
+						</li>
+						<li>
+							<%= link_to("ALEMANIA", {:controller => 'equipos', :id => 3}, :class => 'first') %>
+						</li>
+					</ul>
+				</div>
+
+				<div class="miembros_del_equipo">
+					<ul>
+					<% @nuestro_equipo.each do |nuestro_equipo| %>
+						<li class="lista">
+							<div class="miembros_del_equipo_contenedor clear_block">
+								<div class="foto_personal">
+									<img src="<%= nuestro_equipo.url_imagen%>" alt="">
+								</div>
+								<div class="informacion">
+									<h3><%= nuestro_equipo.nombre %>
+										<span class="cargo"><%= nuestro_equipo.cargo %></span> 
+									</h3>
+									<div class="descripcion_miembro">										
+											<%= sanitize(nuestro_equipo.descripcion, :tags=>['br','strong','i','u','strong','p']) %>
+									</div>
+									<div class="contacto">Contacto</div>
+									<div class="redes_sociales">
+										<ul>
+											<li><a href="<%= nuestro_equipo.link_twitter %>" target="_blank" class="social_icons btns twitter">t</a></li>
+											<li><a href="<%= nuestro_equipo.link_facebook %>" target="_blank"  class="social_icons btns facebook">f</a></li>
+											<li><a href="mailto:<%= nuestro_equipo.link_email %>" target="_blank"  class="social_icons btns email">e</a></li>									
+										</ul>									
+									</div>
+								</div>
+							</div>
+						</li>
+					<% end %>
+<!-- 
+						
+						<li class="lista">
+							<div class="miembros_del_equipo_contenedor clear_block">
+								<div class="foto_personal">
+									<img src="/assets/eq.jpg" alt="">
+								</div>
+								<div class="informacion">
+									<h3>NOMBRE Y APELLIDO <span class="cargo">cargo</span> </h3>
+									<div class="descripcion_miembro">
+										<p>
+										Ut dignissim condimentum arcu, eu varius orci mollis sit amet. Proin et quam id lectus venenatis sollicitudin tincidunt vel tellus. Aenean faucibus sem vel velit vehicula porttitor. Vestibulum a volutpat urna. 
+											
+										</p>
+									</div>
+									<div class="contacto">Contacto</div>
+									<div class="redes_sociales">
+										<ul>
+											<li><a href="" class="social_icons btns twitter">t</a></li>
+											<li><a href="" class="social_icons btns facebook">f</a></li>
+											<li><a href="" class="social_icons btns email">e</a></li>									
+										</ul>									
+									</div>
+								</div>
+							</div>
+						</li>
+ -->
+
+					</ul>					
+				</div>
+			</div>
+			<div class="columnas columna_lateral">
+				<%= render(:partial => "compartido/sidebar") %>
+			</div>
+
+		</div>
+	
+
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>

@@ -1,0 +1,30 @@
+
+	<div class="menu_lateral">
+		<ul class="deep_1">
+			<% @menu_lateral.each do |menu_lateral| %>
+				<li>
+					<% if menu_lateral.id==7 %>
+						<%= link_to(menu_lateral.enlace, {:controller=>'equipos', :id=>1}) %>
+					<% else %>
+						<%= link_to(menu_lateral.enlace, {:controller=>'quienes_somos', :id=>menu_lateral.id}) %>
+						<ul class="deep_2">
+							<% @sub_menu_lateral.each do |sub_menu_lateral| %>								
+								<% if menu_lateral.id == sub_menu_lateral.about_id %>
+									<li>
+										<%= link_to(sub_menu_lateral.enlace, {:controller=>'perfiles', :id=>sub_menu_lateral.id}) %>
+									</li>
+								<%	end %>
+							<% end %>	
+						</ul>
+					<%end%>
+
+
+				</li>
+			<% end %>
+		</ul>	
+	</div>
+	<a href="#" class="boton_enterate">
+		<div>ENTÉRATE MÁS DE NUESTRO</div>
+		<div class="txt_eventos">EVENTOS</div>
+	</a>
+

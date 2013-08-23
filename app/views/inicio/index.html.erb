@@ -1,0 +1,230 @@
+
+
+<div class="page index">
+	<script type="text/javascript">
+		// var video_home_id="LZk4KtBZv3c"
+		var video_home_id="<%= @inicio.inicios_url_video %>"
+	</script>
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="banner_home_contenedor">
+			<div class="banner_home">
+				<input type="button" class="btns flechas_banner flecha_banner_izq">
+				<input type="button" class="btns flechas_banner flecha_banner_der">
+
+				
+				<div class="patron_inferior"></div>
+				<div class="banner_home_cycle">
+					
+					<% @bannerhome.each do |bannerhome| %>
+						<% if bannerhome.visible %>
+					<div class="banner_items">
+						<div class="titulo">
+							<p class=""><%= bannerhome.titulo %> </p>
+							<a href="<%= bannerhome.ver_mas_url %>" class="btns banner_ver_mas"></a>	
+						</div>						
+						<img src="<%= bannerhome.url_imagen %>">						
+					</div>
+						<% end %>
+
+					
+
+<!-- 					
+					<div class="banner_items">
+						<div class="titulo">
+							<p class="">222Lorem ipsum dolor sit<br> amet consectetur</p>
+							<a href="#" class="btns banner_ver_mas"></a>	
+						</div>	
+						<img src="assets/banner_2.jpg">						
+					</div>
+					<div class="banner_items">
+						<div class="titulo">
+							<p class="">333Lorem ipsum dolor sit<br> amet consectetur</p>
+							<a href="#" class="btns banner_ver_mas"></a>	
+						</div>	
+						<img src="assets/banner_3.jpg">						
+					</div>
+					<div class="banner_items">
+						<div class="titulo">
+							<p class="">444Lorem ipsum dolor sit<br> amet consectetur</p>
+							<a href="#" class="btns banner_ver_mas"></a>	
+						</div>	
+						<img src="assets/banner_4.jpg">						
+					</div> -->
+
+					<% end %>
+
+				</div>
+			</div>			
+		</div>
+
+
+
+		<div class="inicio_contenedor">	
+			<div class="msj_site">
+
+				<h3 class="news_gothicoblique">
+
+					<span class="verde">
+						<%= @tit_naranja %>	
+					</span>
+					<span class="naranja">
+					 	<%= @tit_verde %>	
+					</span>
+				</h3>
+
+				<p class="news_gothic_stdbold">
+					<%= sanitize(@inicio.inicios_texto, :tags => ['br']) %>	
+					
+				</p>
+			</div>
+
+			<div class="perfil_sudamerica">
+
+
+				<div class="contenido_perfil video_perfil">
+					<div id="video_embed_inicio">
+						
+					</div>
+					<!-- <iframe width="400" height="272" src="//www.youtube.com/embed/HPj4LXBQ3-8" frameborder="0" allowfullscreen></iframe>				 -->
+				</div>
+
+				<div class="contenido_perfil msj_perfil">
+					
+					<div class="txt_tit verde"><%=  sanitize(@tit_naranja_perfil, :tags=>['br','strong','i','u','strong','p']) %></div>
+
+					<div class="txt_sub naranja"><%=  sanitize(@tit_verde_perfil, :tags=>['br','strong','i','u','strong','p']) %></div>
+					
+					<p>
+
+					<%= sanitize(@inicio.inicios_texto_perfil, :tags=>['br','strong','i','u','strong','p'])  %>
+					</p>
+					<!-- <a href="#" class="btns btn_perfil_leermas">Leer mas</a>  -->
+					<%= link_to("", {:controller=>'perfiles' ,:id=>2}, :class => 'btns btn_perfil_leermas') %>	
+
+					
+					
+				</div>	
+							
+			</div>
+
+
+			<div class="home_seccion ultimas_noticias">
+				<div class="titulo">
+					<h3>
+						<span class="news_gothicoblique">ÚLTIMAS </span>
+						<span class="news_gothic_stdbold">NOTICIAS</span>
+					</h3>
+					<!-- <a href="#" class="enlace ver_mas_noticias">Ver más noticias</a> -->
+					<%= link_to("Ver más noticias", {:controller=>'actualidades'}, :class => 'enlace ver_mas_noticias') %>	
+					<div class="clear_both"></div>
+				</div>
+
+
+				<div class="contenedor">
+					<% @ultimas_noticias.each do |ultimas_noticias| %>
+						<div class="noticia">
+							<div class="noticia_home_img">
+								<a href="actualidades/index/<%= ultimas_noticias.id%>">
+									<img src="<%= ultimas_noticias.url_imagen_grande%>" alt="">
+								</a>
+								
+							</div>
+							<h4><%= ultimas_noticias.fecha %></h4>
+							<p>
+								<%=  truncate(sanitize(ultimas_noticias.sub_titulo, :tags=>['']), :length=>100, :omission =>'...') %>
+								<span>
+									<%= link_to("Leer más", {:controller=>'actualidades' ,:id=>ultimas_noticias.id}, :class => 'noticias_leer_mas') %>	
+								</span>
+							</p>
+
+						</div>
+					<% end%>	
+
+<!-- 
+					<div class="noticia">
+						<div class="noticia_home_img">
+							<img src="/assets/noti.jpg" alt="">
+						</div>
+						<h4>JUN 08 DEL 2013 </h4>
+						<p>
+							BEC Recordings and AIR1 Celebrate the Club Awesome Live Tour 
+							<span><a href="#" class="noticias_leer_mas">Leer más</a></span>
+						</p>
+
+					</div>
+					<span class="separador_noticia"></span>
+					<div class="noticia">
+						<div class="noticia_home_img">
+							<img src="/assets/noti.jpg" alt="">
+						</div>
+						<h4>JUN 08 DEL 2013 </h4>
+						<p>
+							BEC Recordings and AIR1 Celebrate the Club Awesome Live Tour 
+							<span><a href="#"  class="noticias_leer_mas">Leer más</a></span>
+						</p>
+					</div>
+					<span class="separador_noticia"></span>
+					<div class="noticia">
+						<div class="noticia_home_img">
+							<img src="/assets/noti.jpg" alt="">
+						</div>
+						<h4>JUN 08 DEL 2013 </h4>
+						<p>
+							BEC Recordings and AIR1 Celebrate the Club Awesome Live Tour 
+							<span><a href="#"  class="noticias_leer_mas">Leer más</a></span>
+						</p>
+					</div>					
+				
+ -->
+
+				</div>
+			</div>
+
+
+
+			<div class="home_seccion ultimos_proyectos">
+				<div class="titulo">
+					<h3>
+						<span class="news_gothicoblique">ÚLTIMOS </span>
+						<span class="news_gothic_stdbold">PROYECTOS</span>
+					</h3>
+					<a href="#" class="enlace ver_mas_proyectos">Ver más proyectos</a>
+					<div class="clear_both"></div>
+				</div>
+				<div class="contenedor">
+					<div class="proyectos">
+						<img src="/assets/noti.jpg">
+						<p>Proyecto 1</p>
+						<a href="#" class="btns leer_mas ">Leer más</a>
+					</div>
+					<div class="proyectos">
+						<img src="/assets/noti.jpg">
+						<p>Proyecto 1</p>
+						<a href="#" class="btns leer_mas ">Leer más</a>
+					</div>
+					<div class="proyectos">
+						<img src="/assets/noti.jpg">
+						<p>Proyecto 1</p>
+						<a href="#" class="btns leer_mas ">Leer más</a>
+					</div>
+					<div class="proyectos last">
+						<img src="/assets/noti.jpg">
+						<p>Proyecto 1</p>
+						<a href="#" class="btns leer_mas ">Leer más</a>
+					</div>
+
+				</div>
+			</div>			
+
+
+		</div>
+
+	</div>
+	
+	<%= render(:partial => "compartido/footer")%>
+
+</div>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang="es" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Untitled</title>
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<!-- Opciones para compartir en Facebook -->
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:image:secure_url" content="">
+	<meta property="og:site_name" content="">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	<!-- <link rel="stylesheet" href="css/style.css?v=1"> -->  
+  	<%= stylesheet_link_tag    "reset", :media => "all" %>	
+  	<%= stylesheet_link_tag    "style", :media => "all" %>
+	
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-XXXXXXX-X']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+<body>
+	<!-- Añadir código aquí -->
+	
+	<%= yield %>
+	
+	<%= javascript_include_tag "vendor/jquery-1.8.1.min" %>
+  	<%= javascript_include_tag "vendor/jquery-ui-1.10.3.custom.min" %>
+	<%= javascript_include_tag "vendor/app.fb" %>
+	<%= javascript_include_tag "vendor/TweenMax.min" %>
+	<%= javascript_include_tag "vendor/cycle" %>
+	<%= javascript_include_tag "vendor/swfobject" %>
+	<%= javascript_include_tag "vendor/jquery.alphanumeric.pack" %>
+	<%= javascript_include_tag "vendor/jquery.validate" %>
+  	<%= javascript_include_tag "init" %>
+</body>
+</html>

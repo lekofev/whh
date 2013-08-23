@@ -1,0 +1,106 @@
+
+<div class="page publicaciones">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_site clear_block">
+			<div class="columnas columna_unica">
+				<h1 class="titulo_principal_perfil">
+					<span class="verde">
+						PUBLICACIONES
+					</span>
+				</h1>
+				<div class="texto_general clear_block">
+					<div class="contenedor_texto textos">
+						<div class="">
+							<%= sanitize(@publicacion.texto, :tags=>['br','strong','i','u','strong','p']) %>
+						</div>
+						<div class="">	
+							<%= sanitize(@publicacion.bajada, :tags=>['br','strong','i','u','strong','p']) %>
+						</div>
+						
+					</div>
+					<div class="contenedor_imagen">
+						<img src="<%=  @publicacion.url_imagen %>" alt="">						
+					</div>					
+				</div>
+
+				<div class="contendor_publicaciones">
+					<ul class="lista_publicaciones">
+
+					<% @publicategoria.each do |publicategoria| %>
+						<li>
+							<div class="publicacion_item">
+								<div class="titulo_publicacion">
+									<%= publicategoria.publi_categoria %>
+								</div>
+								<ul class="lista_archivos">
+
+									<% @publiarchivo.each do |publiarchivo| %>
+										<% if publiarchivo.publicategori_id==publicategoria.id %>
+											<li>
+												<a href="<%= publiarchivo.url_archivo %>" target="_blank" ><%= publiarchivo.titulo %> </a>										
+											</li>											
+										<% end %>
+									<!-- 
+									<li>
+										<a href="">Lista de Memoria Anual Suramerica</a>										
+									</li>
+									<li>
+										<a href="">Lista de Memoria Anual Suramerica</a>										
+									</li> -->
+									<% end %>
+								</ul>
+								<% @publivideo.each do |publivideo| %>
+									<% if publivideo.publicategori_id==publicategoria.id %>
+										<div class="btn_ver_video">
+											<a href="">
+												<div class="ver_videos_de verde">VER VIDEOS DE</div>
+												<div class="programa_regional naranja">PROGRAMA REGIONAL SURAMERICA</div>	
+											</a>
+										</div>										
+									<% end %>
+								<% end %>
+
+							</div>
+						</li>
+					<% end %>
+
+
+
+
+						<!-- 
+						<li>
+							<div class="publicacion_item">
+								<div class="titulo_publicacion">
+									Publicaciones del Programa Regional Suramerica
+								</div>
+								<ul class="lista_archivos">
+									<li>
+										<a href="">Lista de Memoria Anual Suramerica</a>										
+									</li>
+									<li>
+										<a href="">Lista de Memoria Anual Suramerica</a>										
+									</li>
+								</ul>
+
+								<div class="btn_ver_video">
+									<a href="">
+										<div class="ver_videos_de verde">VER VIDEOS DE</div>
+										<div class="programa_regional naranja">PROGRAMA REGIONAL SURAMERICA</div>	
+									</a>
+								</div>
+							</div>
+						</li>
+ -->
+
+					</ul>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>

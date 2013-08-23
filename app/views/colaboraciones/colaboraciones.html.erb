@@ -1,0 +1,101 @@
+
+<div class="page colaboraciones">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_site clear_block">
+			<div class="columnas columna_unica">
+				<h1 class="titulo_principal_perfil">
+					<span class="verde">
+						COLABORACIONES
+					</span>
+				</h1>
+				<div class="texto_general clear_block">
+					<div class="contenedor_texto textos">
+						<div class="">
+							<%= sanitize(@colaboracion.texto, :tags=>['br','strong','i','u','strong','p']) %>
+						</div>
+						<div class="">	
+							<%= sanitize(@colaboracion.bajada, :tags=>['br','strong','i','u','strong','p']) %>
+						</div>
+						
+					</div>
+					<div class="contenedor_imagen">
+						<img src="<%=  @colaboracion.url_imagen %>" alt="">						
+					</div>					
+				</div>
+
+				<% def titulo_doble_color_(t) %>
+				<% return t.split('|')%>										
+				<% end %>
+
+				<div class="contendor_colaboraciones clear_block">
+					<ul class="lista_colaboraciones">
+						<% @colabocategoria.each do |colabocategoria| %>
+						<li>
+							<div class="">
+								<h3 class="titulo">
+									<% @d=titulo_doble_color_(colabocategoria.colabo_categoria) %> 
+
+									<span class="naranja"><%= @d[0] %> </span>
+									<span class="beige"> <%= @d[1] %> </span>
+								</h3>
+								<div class="contenedor_colaboraciones clear_block">
+									<ul class="lista_colaboradores">
+										<% @colaborador.each do |colaborador| %>											
+											<% if colaborador.colabocategori_id==colabocategoria.id %>
+											<li>
+												<div class="logo_colaborador">
+													<img src="<%= colaborador.url_logo_img %>" alt="">
+												</div>
+												<div class="nombre_colaborador">
+													<%= colaborador.nombre_colaborador %>
+												</div>
+												<div class="link_colaborador">
+													<a href="<%= colaborador.url_pagina_web %>"> <%= colaborador.url_pagina_web %> </a>												
+												</div>
+											</li>									
+											<% end %>
+										<% end %>
+									</ul>
+								</div>								 
+							</div>
+						</li>
+						<% end %>
+					
+<!-- 
+						<li>
+							<div class="">
+								<h3 class="titulo">
+									<span class="naranja">ORGANIZACIONES </span>
+									<span class="beige"> SOCIAS</span>
+								</h3>
+								<div class="contenedor_colaboraciones clear_block">
+									<ul class="lista_colaboradores">
+										<li>
+											<div class="logo_colaborador">
+												<img src="/assets/publi.png" alt="">
+											</div>
+											<div class="nombre_colaborador">
+												TITULO
+											</div>
+											<div class="link_colaborador">
+												<a href="">www.dignissim.com</a>												
+											</div>
+										</li>
+									</ul>
+								</div>								 
+							</div>
+						</li>
+ -->
+
+					</ul>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>

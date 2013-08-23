@@ -1,0 +1,3 @@
+class BannerhomesController < ApplicationController
+	
+end

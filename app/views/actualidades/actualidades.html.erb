@@ -1,0 +1,90 @@
+
+<div class="page actualidades">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_site clear_block">
+			<div class="columnas columna_unica">
+				
+				<% if @actualidad_arr %>
+				<% @actualidad_arr.each do |actualidad| %>
+				<div class="actualidad actualidad_resumen">
+					<div class="patbordes pat_sup"></div>
+					<div class="pat_central">
+						<h2>
+							<%= link_to(actualidad.titulo, {:controller => 'actualidades', :id => actualidad.id}) %>
+						</h2>
+						<div class="fecha">
+							<%= actualidad.fecha %>
+							
+						</div>
+
+						<div class="bloque_info clear_block">
+							<div class="imagen_chica">
+								<img src="<%= actualidad.url_imagen_chica %>" alt="">
+							</div>
+							<div class="texto_contenedor ">
+								<h3>
+									<%= sanitize(actualidad.sub_titulo, :tags=>['br','strong','i','u','strong','p']) %>
+								</h3>
+								<div class="resumen">
+									<%= sanitize(actualidad.resumen, :tags=>['br','strong','i','u','strong','p']) %>
+								</div>
+								<div class="leer_mas">
+									<%= link_to("Leer más de esta noticia", {:controller => 'actualidades', :id => actualidad.id}) %>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="patbordes pat_inf"></div>					
+				</div>	
+				<% end %>
+
+				<div class="paginador">
+					<!-- <a href="" class="btns arrows prev">Anterior</a> -->
+					<!-- <a href="" class="btns arrows next">Siguiente</a> -->
+					<%= paginate @actualidad_arr %>
+				</div>
+				<% else %>
+				<div class="actualidad actualidad_completo">
+					<div class="patbordes pat_sup"></div>
+					<div class="pat_central_completo">
+						<h2>
+							<%= @actualidad_id.titulo %>
+						</h2>
+						<div class="fecha">
+							<%= @actualidad_id.fecha %>
+							
+						</div>
+
+						<div class="bloque_info clear_block">
+
+
+							<div class="texto_contenedor_completo ">
+								<h3>
+									<%= sanitize(@actualidad_id.sub_titulo, :tags=>['br','strong','i','u','strong','p']) %>
+								</h3>
+								<div class="texto_completo">
+									<%= sanitize(@actualidad_id.resumen, :tags=>['br','strong','i','u','strong','p']) %>
+								</div>
+							</div>							
+							<div class="imagen_grande">
+								<img src="<%= @actualidad_id.url_imagen_chica %>" alt="">
+							</div>
+						</div>
+						
+					</div>
+					<div class="patbordes pat_inf"></div>					
+				</div>	
+
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>
+

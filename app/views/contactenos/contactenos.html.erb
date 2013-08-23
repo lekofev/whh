@@ -1,0 +1,71 @@
+
+<div class="page contactenos">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_site clear_block">
+			<div class="columnas columna_unica">
+
+				<h1 class="titulo_principal_perfil">
+					<span class="verde">
+						CONTÁCTENOS
+					</span>
+				</h1>
+				<div class="formulario">
+
+					<form action="" class="form_contactenos">
+						<h3>Para una mayor información, por favor llenar los siguientes campos.</h3>
+						<ul>
+							<li>
+								<label for="" class="label_texto">Nombres*</label>
+								 <input type="text" class="input_texto" id="nombre" name="nombre">
+							</li>
+							<li>
+								<label for="" class="label_texto">Apellidos*</label>
+								 <input type="text" class="input_texto" id="apellido_paterno" name="apellido_paterno">
+							</li>
+							<li>
+								<label for="" class="label_texto">Dirección</label> 
+								<input type="text" class="input_texto" id="direccion" name="direccion">
+							</li>
+							<li>
+								<label for="" class="label_texto">Ciudad</label> 
+								<input type="text" class="input_texto" id="ciudad" name="ciudad">
+							</li>
+							<li>
+								<label for="" class="label_texto">Estado</label> 
+								<input type="text" class="input_texto" id="estado" name="estado">
+							</li>
+							<li>
+								<label for="" class="label_texto">País</label> 
+								<input type="text" class="input_texto" id="pais" name="pais">
+							</li>
+							<li>
+								<label for="" class="label_texto">Teléfono*</label> 
+								<input type="text" class="input_texto" maxlength="9" id="telefono" name="telefono">
+							</li>
+							<li>
+								<label for="" class="label_texto">Correo*</label> 
+								<input type="text" class="input_texto" id="email" name="email">
+							</li>
+							<li>
+								<label for="" class="label_texto mensaje">Mensaje*</label>
+							</li>
+							<li>
+								<textarea cols="30" rows="10"  id="mensaje" name="mensaje"></textarea>
+							</li>
+							<li>
+								<input type="button" class="btns btn_enviar" value="">
+							</li>
+						</ul>						
+					</form>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>

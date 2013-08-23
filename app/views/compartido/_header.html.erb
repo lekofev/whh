@@ -1,0 +1,53 @@
+	<div class="header">
+		<div class="hader_bg">
+			<div class="header_contenido">
+				<div class="header_datos">
+
+					<!-- <a href="" class="logo"></a> -->
+					<%= link_to("", {:controller=>'inicio'}, :class => 'logo') %>
+					<div class="datos_header">
+						<div class="contador-likes">
+							<span>3,587 </span> VISITANTES
+						</div>
+						<div class="redes_sociales_header">
+							<ul class="menu_redes_sociales_header">
+								<li class="siguenos">siguenos en:</li>
+								<li><a href="" class="btns redes_h fa"></a></li>
+								<li><a href="" class="btns redes_h tw"></a></li>
+								<li><a href="" class="btns redes_h yu"></a></li>
+							</ul>
+						</div>
+						
+					</div>
+					<div class="logo_sudamerica">
+						
+					</div>
+				</div>
+				<div class="menu MyriadPro_Regular">
+					<ul>
+
+						<!-- <li><a href="" class="menu_items menu_item_1">Quiénes Somos</a></li> -->
+
+						<li><%= link_to("Quiénes Somos", {:controller=>'quienes_somos', :id=>1}, :class => 'menu_items menu_item_1') %></li>
+						<li><a href="" class="menu_items menu_item_2">Nuestros Programas y Proyectos</a></li>
+						<li><%= link_to("Publicaciones", {:controller=>'publicaciones', :id=>1}, :class => 'menu_items menu_item_3') %></li>
+						<li><%= link_to("Actualidades", {:controller=>'actualidades', :action=>''}, :class => 'menu_items menu_item_4') %></li>
+						<li><%= link_to("Colaboraciones", {:controller=>'colaboraciones', :id=>1}, :class => 'menu_items menu_item_5') %></li>
+						<li><%= link_to("Contácto", {:controller=>'contactenos'}, :class => 'menu_items menu_item_6') %></li>
+						
+
+						
+					
+
+
+					</ul>
+					<form class="buscador" action="">
+						<input class="btns btn_buscar" type="submit" value="">
+						<input class="input_buscador" type="text" value="Buscar">
+					</form>
+				</div>
+				
+			</div>
+			
+		</div>	
+	</div>
