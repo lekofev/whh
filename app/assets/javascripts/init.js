@@ -42,6 +42,42 @@ $(document).ready(function(){
 	{
 		contacto()
 	}
+	else if($('.page').hasClass('programas'))
+	{
+		programas()
+	}
+
+
+	function programas(){
+		$('.mapa_over_area').each(function(index, val) {
+			var area;
+			$(this).on('mouseover', function(){				
+				area=$(this).attr('data-area')
+				$('.tooltip_'+area).show()
+				$('.mapa_over_'+area).show()
+				// console.log(area)
+			})
+			$(this).on('mouseout', function(){				
+				area=$(this).attr('data-area')
+				$('.tooltip_'+area).hide()
+				$('.mapa_over_'+area).hide()
+				// console.log(area)
+			})
+
+			// var area=$(this).attr('data-area')
+			
+		});
+
+		
+		$('.sudamerica_over_area').on('click', function(e){
+			e.preventDefault()
+			$('.mapamundi').hide()
+			$('.sudamerica_mapa').show()
+		})
+
+
+
+	}//programas
 
 
 
