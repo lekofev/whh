@@ -1778,11 +1778,186 @@ div.tooltip .colita{
 }
 .punto{
 	position: absolute;
-	width: 12px;
-	height: 12px;
+	width: 10px;
+	height: 10px;
 	display: block;
 	border-radius: 5px;
 }
+.punto:hover{
+	webkit-box-shadow: 0px 0px 2px 2px #7DC201;        
+    box-shadow: 0px 0px 2px 2px #7DC201; 
+}
 .punto.celeste{
 	background-color: #60d1e0;
+}
+
+.celeste.celeste_1{
+    left: 50px;
+    top: 34px;
+}
+.celeste.celeste_2{
+    left: 43px;
+    top: 67px;
+}
+.celeste.celeste_3{
+    left: 63px;
+    top: 94px;
+}
+.celeste.celeste_4{
+    left: 45px;
+    top: 105px;
+}
+.punto.verde{
+	background-color: #94d600;
+}
+.verde.verde_1{
+    left: 13px;
+    top: 12px;
+}
+.verde.verde_2{
+    left: 22px;
+    top: 67px;
+}
+.punto.crema{
+	background-color: #f0c2b3;
+}
+.crema.crema_1{
+    left: 29px;
+    top: 18px;
+}
+.crema.crema_2{
+    left: 16px;
+    top: 28px;
+}
+.crema.crema_3{
+    left: 75px;
+    top: 105px;
+}
+.crema.crema_4{
+    left: 96px;
+    top: 151px;
+}
+.punto.cremao{
+	background-color: #d1b888;
+}
+.cremao.cremao_1{
+    left: 177px;
+    top: 145px;
+}
+.cremao.cremao_2{
+    left: 133px;
+    top: 170px;
+}
+.cremao.cremao_3{
+    left: 126px;
+    top: 182px;
+}
+.punto.amarillo{
+	background-color: #eee93b;
+}
+.amarillo.amarillo_1{
+    left: 118px;
+    top: 140px;
+}
+.punto.rosad{
+	background-color: #ff9cb2;
+}
+.rosad.rosad_1{
+    left: 143px;
+    top: 131px;
+}
+.rosad.rosad_2{
+    left: 144px;
+    top: 145px;
+}
+.rosad.rosad_3{
+    left: 144px;
+    top: 159px;
+}
+.rosad.rosad_4{
+    left: 158px;
+    top: 172px;
+}
+.rosad.rosad_5{
+    left: 144px;
+    top: 181px;
+}
+.rosad.rosad_6{
+    left: 135px;
+    top: 190px;
+}
+.punto.gris{
+	background-color: #a4aa84;
+}
+.gris.gris_1{
+    left: 91px;
+    top: 121px;
+}
+
+.punto.rojo{
+	background-color: #ff5a5a;
+}
+.rojo.rojo_1{
+    left: 50px;
+    top: 86px;
+}
+.rojo.rojo_2{
+    left: 90px;
+    top: 107px;
+}
+.rojo.rojo_3{
+    left: 77px;
+    top: 120px;
+}
+
+.punto.rosam{
+	background-color: #ffaf77;
+}
+.rosam.rosam_1{
+    left: 72px;
+    top: 134px;
+}
+
+.punto.verdeo{
+	background-color: #3daf2c;
+}
+.verdeo.verdeo_1{
+    left: 96px;
+    top: 135px;
+}
+.verdeo.verdeo_2{
+    left: 84px;
+    top: 142px;
+}
+
+.punto.morado{
+	background-color: #a8a4e0;
+}
+.morado.morado_1{
+    left: 36px;
+    top: 82px;
+}
+.morado.morado_2{
+    left: 59px;
+    top: 129px;
+}
+.morado.morado_3{
+    left: 164px;
+    top: 135px;
+}
+.morado.morado_4{
+    left: 158px;
+    top: 156px;
+}
+
+.punto.naranja{
+	background-color: #ff8400;
+}
+.naranja.naranja_1{
+    left: 61px;
+    top: 110px;
+}
+.naranja.naranja_2{
+    left: 116px;
+    top: 117px;
 }
