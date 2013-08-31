@@ -1,7 +1,7 @@
 class CreateOrgsocs < ActiveRecord::Migration
   def change
     create_table :orgsocs do |t|
-     	t.integer "proyecto_id"
+     	t.integer "proyect_id"
     	t.string "nombre"
     	t.string "enlace"
     	t.string "url_imagen"
@@ -10,6 +10,6 @@ class CreateOrgsocs < ActiveRecord::Migration
     	t.boolean "visible", :default => true
       t.timestamps
     end
-    add_index("orgsocs", "proyecto_id")
+    add_index("orgsocs", "proyect_id")
   end
 end
