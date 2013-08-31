@@ -1749,9 +1749,23 @@ div.tooltip .colita{
     font-family: "Conv_MyriadPro-Regular";
     font-size: 12px;
     font-weight: bold;
+    left: -80px;
     line-height: 1.2;
     padding: 15px;
     position: absolute;
+    bottom: 38px;
+    width: 200px;
+    display: none;
+    z-index: 100;
+}
+.rosad .tooltip_map{
+	width: 230px;
+}
+.tooltip_map .subtitle{
+	color: #6d9901;
+	font-size: 14px;
+	font-weight: bold;
+
 }
 .tooltip_map h5{
 	color: #2f6f00;
@@ -1784,6 +1798,11 @@ div.tooltip .colita{
 	border-radius: 5px;
 }
 .punto:hover{
+	webkit-box-shadow: 0px 0px 2px 2px #7DC201;        
+    box-shadow: 0px 0px 2px 2px #7DC201; 
+}
+
+.punto.activo{
 	webkit-box-shadow: 0px 0px 2px 2px #7DC201;        
     box-shadow: 0px 0px 2px 2px #7DC201; 
 }
@@ -1960,4 +1979,63 @@ div.tooltip .colita{
 .naranja.naranja_2{
     left: 116px;
     top: 117px;
+}
+
+
+/* ----------------------- Proyecto -----------------*/
+.page.proyecto .contenido{
+	padding-top: 170px;
+	margin-bottom: 20px;
+}
+.contenido_proyecto{
+    margin: auto;
+    min-height: 660px;
+    padding-left: 28px;
+    padding-top: 40px;
+    width: 930px;
+}
+.contenido_proyecto h1{
+	border: none;
+}
+.contenido_proyecto .columnas{
+	float: left;
+	margin-top: 20px;
+}
+.contenido_proyecto .columna_lateral{
+	width: 277px;
+	margin-right: 30px;
+	border-right: 1px solid #543c08;
+
+}
+.contenido_proyecto .columna_central{
+	width: 576px;
+}
+
+.contenido_proyecto .columnas h5{
+	color: #85c923;
+	font-family: "Conv_MyriadPro-Regular";
+	font-size: 17px;
+	font-weight: bold;	
+	margin-bottom: 5px;
+	
+	margin-top: 10px;
+}
+p{
+    color: #ADA591;
+    font-family: arial;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+.contenido_proyecto .columna_lateral li{
+    color: #ADA591;
+    font-family: arial;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.contenido_proyecto .columna_lateral img.org_socias{
+	width: 127px;
+	height: 60px;
+	border: 1px solid #cba674;
+	display: block;
 }

@@ -64,6 +64,19 @@ $(document).ready(function(){
 				// console.log(area)
 			})
 
+			$('.cont_pts .punto').on('mouseover', function(){
+				var color =	$(this).attr('data-color')
+				$('.punto.'+color).addClass('activo')
+				$(this).children('.tooltip_map').show()
+			})
+
+			$('.cont_pts .punto').on('mouseleave', function(){
+				var color =	$(this).attr('data-color')
+				$('.punto.'+color).removeClass('activo')
+				$(this).children('.tooltip_map').hide()
+			})
+
+
 			// var area=$(this).attr('data-area')
 			
 		});
