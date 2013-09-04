@@ -7,7 +7,7 @@ ActiveAdmin.register Publicacion do
       end
     end
 
-     form do |f|                         
+    form do |f|                         
 	    f.inputs "Publicacion DetailsLALAL" do                   
         f.input :visible       
 	      f.input :titulo

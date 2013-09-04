@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130831203251) do
+ActiveRecord::Schema.define(:version => 20130831225910) do
 
   create_table "abouts", :force => true do |t|
     t.string   "titulo"
@@ -100,6 +100,18 @@ ActiveRecord::Schema.define(:version => 20130831203251) do
 
   add_index "bannerhomes", ["inicio_id"], :name => "index_bannerhomes_on_inicio_id"
 
+  create_table "cofinanciadores", :force => true do |t|
+    t.integer  "proyect_id"
+    t.string   "nombre"
+    t.string   "enlace"
+    t.integer  "z_index"
+    t.boolean  "visible",    :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  add_index "cofinanciadores", ["proyect_id"], :name => "index_cofinanciadores_on_proyect_id"
+
   create_table "colabocategoris", :force => true do |t|
     t.integer  "colaboracion_id"
     t.string   "colabo_categoria"
@@ -173,6 +185,34 @@ ActiveRecord::Schema.define(:version => 20130831203251) do
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
     t.boolean  "inicios_visible",       :default => false
+  end
+
+  create_table "orgsocs", :force => true do |t|
+    t.integer  "proyect_id"
+    t.string   "nombre"
+    t.string   "enlace"
+    t.string   "url_imagen"
+    t.string   "alt_imagen"
+    t.integer  "z_index"
+    t.boolean  "visible",    :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+  end
+
+  add_index "orgsocs", ["proyect_id"], :name => "index_orgsocs_on_proyect_id"
+
+  create_table "pconcluidos", :force => true do |t|
+    t.string   "titulo"
+    t.string   "url_pdf"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "pejecucions", :force => true do |t|
+    t.string   "titulo"
+    t.string   "url_pdf"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "proyects", :force => true do |t|

@@ -327,7 +327,15 @@ label.error{
 	color: #fefefe;
 	background-color: #38860c;	
 }
-.page.programas_proyectos .menu_item_2{
+.page.programas .menu_item_2{
+	color: #fefefe;
+	background-color: #38860c;	
+}
+.page.proyecto .menu_item_2{
+	color: #fefefe;
+	background-color: #38860c;	
+}
+.page.concluidos .menu_item_2{
 	color: #fefefe;
 	background-color: #38860c;	
 }
@@ -1606,7 +1614,7 @@ label.error{
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: none;
+	/*display: none;*/
 }
 .mapa_continentes .sudamerica_mapa{
 	background-image: url('/assets/sudamerica.jpg');
@@ -1617,7 +1625,7 @@ label.error{
 	position: absolute;
 	top: 0;
 	left: 0;
-	/*display: none;*/
+	display: none;
 }
 .mapa_continentes img{
 	margin-top: 60px;
@@ -2010,8 +2018,8 @@ div.tooltip .colita{
 .contenido_proyecto .columna_central{
 	width: 576px;
 }
-
-.contenido_proyecto .columnas h5{
+.contenido_proyecto .columnas h5,
+.contenido_proyecto .columnas strong{
 	color: #85c923;
 	font-family: "Conv_MyriadPro-Regular";
 	font-size: 17px;
@@ -2038,4 +2046,67 @@ p{
 	height: 60px;
 	border: 1px solid #cba674;
 	display: block;
+}
+
+/* ---------------------- concluidos -------------------*/
+
+.page.concluidos .contenido{
+	padding-top: 170px;
+	margin-bottom: 20px;
+}
+.contenido_concluidos{
+    margin: auto;
+    min-height: 660px;
+    padding-left: 28px;
+    padding-top: 40px;
+    width: 930px;
+}
+.lista_concluidos{
+	
+	padding-top: 20px;
+
+}
+.lista_concluidos ul {
+}
+.lista_concluidos ul li{
+	margin-bottom: 6px;
+    list-style: disc inside none;
+    padding-left: 20px;
+	color: #ada591;
+}
+.lista_concluidos ul li:hover{
+	color: #55a025;
+
+}
+.lista_concluidos ul li a{
+	color: #ada591;
+	font-family: "Conv_MyriadPro-Regular";
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.lista_concluidos ul li a:hover{
+	color: #55a025;
+	text-decoration: underline;
+}
+.btn_programas{
+	width: 191px;
+	height: 32px;
+	display: block;
+	position: absolute;
+	z-index: 50;
+    left: 690px;
+    top: 590px;
+}
+.btn_programas.programas_ejec{
+	background-position: 0 -1013px;	
+}
+.btn_programas.programas_ejec:hover{
+	background-position: 0 -1047px;	
+}
+.btn_programas.programas_conc{
+	background-position: 0 -945px;	
+}
+.btn_programas.programas_conc:hover{
+	background-position: 0 -979px;	
 }

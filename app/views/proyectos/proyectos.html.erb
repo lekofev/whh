@@ -8,22 +8,21 @@
 		<div class="contenido_proyecto clear_block">
 			<h1 class="titulo_principal"> 
 				<span class="naranja">
-					BOL 1044
+					<%= @proyect.titulo %>
 				</span>
 			</h1>
 			<div class="columnas columna_lateral">
 				<h5>Fecha: </h5>
 				<p>
-					15/04/2011 – 14/04/2014
+					<%= @proyect.fecha %>
 				</p>
 				
 
 				<h5>Localidad: </h5>
 					<ul>
-						<li>BOLIVIA</li>
-						<li>Departamento de Chuquisaca</li>
-						<li>Departamento de Potosí</li>
-						<li>Departamento de Santa Cruz</li>
+					<% for n in  @localidad %>
+						<li><%= n %>n</li>
+					<% end%>	
 					</ul>
 
 				<h5>Grupo meta: </h5>
@@ -32,31 +31,28 @@
 				</p>
 
 				<h5>Organizaciones Socias:</h5>
-				<img src="" alt="" class="org_socias">
-				<p>nombre</p>
-				<img src="" alt="" class="org_socias">
-				<p>nombre</p>
+
+					<% @orgsoc.each do |orgsoc| %>
+						<% if orgsoc.visible %>
+							<img src="<%= orgsoc.url_imagen %>" alt="" class="org_socias">
+							<p><%= orgsoc.nombre %></p>
+						<% end %>
+					<% end %>
+
 
 
 				<h5>Cofinanciadores: </h5>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 	
-				</p>
-
+					<ul>
+						<% @orgsoc.each do |orgsoc| %>
+							<% if orgsoc.visible %>							
+								<li><%= orgsoc.nombre %></li>							
+							<% end %>
+						<% end %>
+					</ul>
 			</div>
 			<div class="columnas columna_central">
-<h5>Objetivo general: </h5>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt aliquet turpis at pellentesque. Proin cursus nisi non lacinia consectetur. Duis ac risus pulvinar, hendrerit erat eget, dictum arcu. Aenean rhoncus sollicitudin sapien ut vestibulum.
-</p>
-<h5>Objetivo específico:  </h5>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt aliquet turpis at pellentesque. Proin cursus nisi non lacinia consectetur. Duis ac risus pulvinar, hendrerit erat eget, dictum arcu. Aenean rhoncus sollicitudin sapien ut vestibulum.
-</p>
-<h5>Descripción:  </h5>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt aliquet turpis at pellentesque. Proin cursus nisi non lacinia consectetur. Duis ac risus pulvinar, hendrerit erat eget, dictum arcu. Aenean rhoncus sollicitudin sapien ut vestibulum.
-</p>
+
+<%= sanitize(@proyect.texto_central, :tags=>['br','strong','i','u','strong','p']) %>
 
 			</div>
 		</div>

@@ -1,0 +1,30 @@
+
+
+<div class="page concluidos">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_mapa clear_block">
+			<h1 class="titulo_principal"> 
+				<span class="verde">
+					NUESTROS PROGRAMAS
+				</span>
+				<span class="beige">
+					Y PROYECTOS
+				</span>
+			</h1>
+			<div class="lista_concluidos">
+				<ul>
+					<% @concluidos.each do |concluidos| %>
+							<li><a href="<%= concluidos.url_pdf %>" target="_blank"><%= concluidos.titulo %></a></li>
+						<% end %>			
+				</ul>	
+
+			</div>
+		</div>
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>
