@@ -2,63 +2,66 @@
 <div class="page nosotros">	
 	<%= render(:partial => "compartido/header") %>
 	
-	<div class="contenido">
 
-		<div class="contenido_site clear_block">
-			<div class="columnas columna_central">
-				<div class="imagen_contenido">
-					<img src="<%= @quienes_somos.url_imagen %>" alt="">					
+	<div class="wrapper_contenido">	
+	
+		<div class="contenido">
+
+			<div class="contenido_site clear_block">
+				<div class="columnas columna_central">
+					<div class="imagen_contenido">
+						<img src="<%= @quienes_somos.url_imagen %>" alt="">					
+					</div>
+
+					<h1 class="titulo_principal"> 
+						<span class="verde">
+							<!-- QUIENES -->
+							<%= @_quienes_somos[0] %>
+						</span>
+						<span class="beige">
+							<!-- SOMOS -->
+							<%= @_quienes_somos[1] %>
+						</span>
+					</h1>
+					
+					<div class="textos">
+						<%= sanitize(@quienes_somos.texto, :tags=>['br','strong','i','u','strong','p']) %>
+					</div>
+
+
+
+
+					<div class="acordeon_contenedor clear_block">
+
+
+						<% @acordeon.each do |acordeon| %>
+							<div class="acordeon">
+								<h2>
+									<!-- Mision -->
+									<%= acordeon.titulo %>
+								</h2>
+								<div class="textos">
+
+										<%= sanitize(acordeon.texto, :tags=>['br','strong','i','u','strong','p']) %>					
+								</div>					
+							</div>
+						<% end %>
+
+
+
+					</div>
+
+				</div>
+				<div class="columnas columna_lateral">
+					<%= render(:partial => "compartido/sidebar") %>
 				</div>
 
-				<h1 class="titulo_principal"> 
-					<span class="verde">
-						<!-- QUIENES -->
-						<%= @_quienes_somos[0] %>
-					</span>
-					<span class="beige">
-						<!-- SOMOS -->
-						<%= @_quienes_somos[1] %>
-					</span>
-				</h1>
-				
-				<div class="textos">
-					<%= sanitize(@quienes_somos.texto, :tags=>['br','strong','i','u','strong','p']) %>
-				</div>
-
-
-
-
-				<div class="acordeon_contenedor clear_block">
-
-
-					<% @acordeon.each do |acordeon| %>
-						<div class="acordeon">
-							<h2>
-								<!-- Mision -->
-								<%= acordeon.titulo %>
-							</h2>
-							<div class="textos">
-
-									<%= sanitize(acordeon.texto, :tags=>['br','strong','i','u','strong','p']) %>					
-							</div>					
-						</div>
-					<% end %>
-
-
-
-				</div>
 
 			</div>
-			<div class="columnas columna_lateral">
-				<%= render(:partial => "compartido/sidebar") %>
-			</div>
-
+		
 
 		</div>
-	
-
 	</div>
-
 	<%= render(:partial => "compartido/footer") %>
 
 </div>

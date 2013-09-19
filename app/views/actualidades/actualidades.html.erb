@@ -1,7 +1,7 @@
 
 <div class="page actualidades">	
 	<%= render(:partial => "compartido/header") %>
-	
+	<div class="wrapper_contenido">	
 	<div class="contenido">
 
 		<div class="contenido_site clear_block">
@@ -26,10 +26,10 @@
 							</div>
 							<div class="texto_contenedor ">
 								<h3>
-									<%= sanitize(actualidad.sub_titulo, :tags=>['br','strong','i','u','strong','p']) %>
+									<%= sanitize(actualidad.sub_titulo, :tags=>['br','strong','i','u','strong','p', 'a']) %>
 								</h3>
 								<div class="resumen">
-									<%= sanitize(actualidad.resumen, :tags=>['br','strong','i','u','strong','p']) %>
+									<%= sanitize(actualidad.resumen, :tags=>['br','strong','i','u','strong','p', 'a']) %>
 								</div>
 								<div class="leer_mas">
 									<%= link_to("Leer más de esta noticia", {:controller => 'actualidades', :id => actualidad.id}) %>
@@ -82,6 +82,7 @@
 				<% end %>
 			</div>
 		</div>
+	</div>
 	</div>
 
 	<%= render(:partial => "compartido/footer") %>

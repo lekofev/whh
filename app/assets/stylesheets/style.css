@@ -266,8 +266,11 @@ label.error{
 	margin-left: 10px;
 }
 .redes_sociales_header .menu_redes_sociales_header .siguenos{ 
-	float: left;
-	margin-left: 58px;
+    float: left;
+    font-family: arial;
+    font-size: 14px;
+    margin-left: 58px;
+    padding-top: 1px;
 }
 
 .redes_sociales_header .menu_redes_sociales_header a.fa{
@@ -297,8 +300,10 @@ label.error{
     background-color: green;
     float: right;
     height: 60px;
-    margin-top: 44px;
+    margin-top: 30px;
     width: 100px;
+    visibility: hidden;
+
 }
 .menu{
 	background-color: #51a025;
@@ -315,13 +320,15 @@ label.error{
 	color: #fefefe;
 	font-size: 14px;
 	text-decoration: none;
-	line-height: 3.4;
+	line-height: 3.7;
 	text-shadow: 1px 1px 1px #326317;
     /*filter: dropshadow(color=#326317, offx=1, offy=1);*/
+    font-family: arial;
+    font-size: 13px;
 }
 .menu .menu_items:hover{
 	color: #fefefe;
-	background-color: #38860c;
+	background-color: #38860C;
 }
 .page.nosotros .menu_item_1{
 	color: #fefefe;
@@ -430,7 +437,7 @@ label.error{
 	height: 50px;
 	position: absolute;
 	z-index: 100;
-	top: 270px;
+	top: 230px;
 }
 .flecha_banner_izq{
 	background-position: 0 0;
@@ -449,19 +456,26 @@ label.error{
 .banner_items .titulo{
     left: 310px;
     position: absolute;
-    top: 300px;
+    top: 305px;
     z-index: 200;
+    width: 760px;
 }
 .banner_items .titulo p{
-
-    font-family: 'news_gothicoblique';
+    font-family: 'news_gothic_stdbold';
 	color: #fff;
-	font-size: 38px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	text-shadow: 0 3px 1px #000;
-	margin-bottom: 20px;
+	margin: 0;
 }
 
+.banner_items .titulo p.p_titulo{
+	font-size: 38px;
+	text-transform: uppercase;
+}
+.banner_items .titulo p.p_sub_titulo{
+	font-size: 28px;
+	margin-bottom: 15px;
+}
 .banner_ver_mas{
 	width: 184px;
 	height: 46px;
@@ -489,6 +503,7 @@ label.error{
 	margin: auto;
 }
 .msj_site{
+	padding-top: 20px;
 	width: 870px;
 	margin: 0 auto;
 	height: 180px;
@@ -504,7 +519,7 @@ label.error{
 
 }
 .msj_site h3{
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: bold;
 	text-align: center;
 	margin-bottom: 20px;
@@ -512,9 +527,10 @@ label.error{
 
 .msj_site p{
 	color: #280a05;
-	font-size: 20px;
+	font-size: 19px;
 	text-align: center;
     line-height: 1.2;
+    font-family: arial;
 }
 
 .perfil_sudamerica{
@@ -526,7 +542,7 @@ label.error{
 .contenido_perfil{
 	float: left;
 	width: 48%;
-	
+	margin-left: 15px;
 	padding-top: 60px;
 }
 .txt_tit{
@@ -540,10 +556,10 @@ label.error{
 	margin-bottom: 5px;
 }
 .msj_perfil p{
-	color: #fff;
-	font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 18px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
 }
 .btn_perfil_leermas{
 	width: 156px;
@@ -561,7 +577,7 @@ label.error{
 	margin: 0 auto;
 	height: 300px;
 	/*outline: 1px solid purple;*/
-	padding-top: 20px;
+	padding-top: 10px;
 
 }
 .home_seccion h3{
@@ -575,7 +591,18 @@ label.error{
 	font-weight: bold;
 	float: right;
 	margin-top: 20px;
+	margin-right: 8px;
 }
+.ultimos_proyectos h3{
+    border-bottom: 1px dashed #67402c;
+    color: #51A025;
+    width: 100%;
+    height: 45px;
+}
+.ultimos_proyectos .contenedor{
+	padding-top: 20px;
+}
+
 .ver_mas_noticias:hover{
 	color: #fe4200;
 }
@@ -584,7 +611,7 @@ label.error{
 	font-size: 14px;
 	font-weight: bold;
 	float: right;
-	margin-top: 20px;
+	margin-top: -30px;
 }
 .ver_mas_proyectos:hover{
 	color: #b4ff00;
@@ -596,15 +623,22 @@ label.error{
 	margin-bottom: 10px;
 }
 .ultimas_noticias .contenedor{
-	height: 210px;
-
+    background-image: url("/assets/linea.png");
+    background-position: 281px 0;
+    background-repeat: no-repeat;
+    height: 203px;
+    padding-top: 13px;
 }
 .ultimas_noticias .contenedor .noticia{
 	float: left;
 	width: 270px;
 	height: 100%;
-	margin-right: 20px;
+	margin-right: 30px;
 }
+.ultimas_noticias .contenedor .noticia:last-child {
+	margin-right: 0;
+}
+
 .ultimas_noticias .contenedor .separador_noticia{
 	float: left;
 	width: 30px;
@@ -616,15 +650,15 @@ label.error{
 }
 .noticia_home_img{
 	width: 255px;
-	height: 110px;
+	height: 83px;
 	border: 3px solid #9bff00;
-	webkit-box-shadow:  2px 3px 9px -2px;        
-    box-shadow:  2px 3px 9px -2px;
+	webkit-box-shadow:  2px 2px 8px -4px;        
+    box-shadow:  2px 2px 8px -4px;
 	margin-bottom: 15px;
 }
 .noticia_home_img img{
 	width: 255px;
-	height: 110px;
+	height: 83px;
 }
 
 
@@ -632,7 +666,8 @@ label.error{
     color: #00501F;
     font-size: 17px;
     font-weight: bold;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 .ultimas_noticias p{
 	color: #1f0d03;
@@ -665,9 +700,12 @@ label.error{
 }
 .ultimos_proyectos .proyectos{
 	float: left;
-	width: 190px;
+	width: 187px;
 	height: 216px;
-	margin-right: 36px;
+	margin-right: 40px;
+}
+.ultimos_proyectos .proyectos:last-child{
+	margin-right: 0;
 }
 .ultimos_proyectos .proyectos img{
 	width: 180px;
@@ -682,6 +720,7 @@ label.error{
 
 }
 .ultimos_proyectos .leer_mas{
+	text-indent: -99999px;
 	width: 102px;
 	height: 27px;
 	background-position: left -379px;
@@ -719,8 +758,9 @@ label.error{
     float: left;
     height: 145px;
     margin-top: 15px;
-    width: 200px;
+    width: 215px;
 	border-right: 1px solid #969547;
+	position: relative;
 
 }
 .bloques_pie_pagina.donar{
@@ -730,15 +770,15 @@ label.error{
 .logo_footer{
 	background-image: url('/assets/logo-footer.png');
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: left center;
 }
 .menu_footer ul{
 	margin-top: 20px;
 
 }
 .menu_footer li{
-	margin-bottom: 8px;
-	padding-left: 20px;
+	margin-bottom: 12px;
+	padding-left: 50px;
 }
 .menu_footer a{
 	color: #fff;
@@ -753,11 +793,12 @@ label.error{
 .donar_cont{
 	width: 192px;
 	height: 138px;
-	float: right;
 	margin-top: 5px;
 	background-color: #391a08;
 	font-family: "Conv_MyriadPro-Regular";
 	text-align: center;
+	left: 32px;
+	position: absolute;
 }
 .contribuye{
 	color: #7db200;
@@ -769,7 +810,7 @@ label.error{
 .a_causa{
 	color: #fffacc;
 	font-size: 14px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	margin: 1px 0 10px;
 }
 .btn_donar{
@@ -810,14 +851,15 @@ label.error{
 
 .page.nosotros .contenido{
 	padding-top: 170px;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 .contenido_site{
-    margin: auto;
+    margin: 0 auto 0;
     min-height: 660px;
     padding-left: 28px;
     width: 930px;
     padding-top: 40px;
+    padding-bottom: 60px;
 
 }
 .columnas{
@@ -864,10 +906,22 @@ label.error{
 	font-family:'news_gothic_stdbold';
 	font-size: 32px;
 	font-weight: bold;
-	text-shadow: 1px 2px 1px rgba(26,18,0,.75);
+	text-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
 	border-bottom: 2px dashed #cba674;
-	padding-bottom: 10px;
-	margin-bottom: 20px;
+}
+.proyecto_subtitulo{
+	color: #fff;
+	font-family: "Conv_MyriadPro-Regular";
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 1px 2px 1px rgba(26,18,0,.75);
+	border-bottom: 1px dashed #cba674;
+	padding-bottom: 24px;
+
+}
+.titulo_principal span{
+    display: inline-block;
+    margin-bottom: 7px;
 }
 
 .titulo_principal_perfil{
@@ -886,8 +940,8 @@ label.error{
 .textos p{
     color: #ADA591;
     font-family: arial;
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 13px;
+    line-height: 1.5;
     margin-bottom: 15px;
 
 }
@@ -903,7 +957,7 @@ label.error{
 	font-family: 'Conv_MyriadPro-Regular';
 }
 .menu_lateral .deep_1{
-	padding: 53px 20px 20px 44px;
+	padding: 53px 20px 20px 41px;
 }
 .menu_lateral .deep_1 >li{
 	padding: 9px 0;
@@ -932,8 +986,9 @@ label.error{
 .menu_lateral .deep_2 >li >a{
 	color: #102700;
 	font-size: 14px;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	text-shadow: 0 1px 0 rgba(147,239,89,.75);
+	text-decoration: none;
 }
 .menu_lateral .deep_2 >li >a:hover{
 	color: #b4ff00;
@@ -944,7 +999,7 @@ label.error{
 	border-top: 1px dashed #38302b;
 	border-bottom: 1px dashed #38302b;
 	background-color: #2b1d01;
-	padding: 14px 20px;
+	padding: 1px 20px;
 	margin: 22px;
 
 }
@@ -964,9 +1019,9 @@ label.error{
     color: #FFFFFF;
     display: block;
     margin: 20px auto;
-    padding: 15px 26px;
+    padding: 15px 20px;
     text-decoration: none;
-    width: 196px;
+    width: 207px;
 }
 .boton_enterate .txt_eventos{
 	font-size: 30px;
@@ -1047,7 +1102,7 @@ label.error{
 	color: #6d9901;
     font-family: 'news_gothic_stdbold';
 	font-size: 24px;
-	margin-bottom: 20px;
+	margin-bottom: 6px;
 }
 .informacion h3 span.cargo{
 
@@ -1110,6 +1165,11 @@ label.error{
     background-position: left 200px;
     background-repeat: repeat-x;
 }
+.wrapper_contenido{
+    background-image: url("/assets/footer-textura.png");
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
 .page.publicaciones .contenido {
     margin-bottom: 20px;
     padding-top: 170px;
@@ -1123,8 +1183,9 @@ label.error{
 
 }
 .contenedor_texto{
-	width: 445px;
-	float: left;
+    float: left;
+    text-align: justify;
+    width: 420px;
 }
 .contenedor_texto strong,
 .contenedor_texto b{
@@ -1201,7 +1262,9 @@ label.error{
 
 }
 .programa_regional{
-
+    color: #FF9200;
+    font-size: 17px;
+    font-weight: bold;
 }
 .lista_publicaciones > li{
 	margin-bottom: 30px;
@@ -1268,7 +1331,7 @@ label.error{
 
 /* ---------------------- actualidades ---------------*/
 .page.actualidades .contenido {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     padding-top: 170px;
 }
 .page.actualidades .columna_unica{
@@ -1314,6 +1377,7 @@ label.error{
 	font-weight: bold;
 	text-shadow: 1px 2px 0 rgba(215,208,197,.75);
 	margin-bottom: 12px;
+	text-transform: uppercase;
 }
 .actualidad h2 a{
 	color: #2f6f00;
@@ -1375,10 +1439,32 @@ label.error{
 	font-weight: bold;
 	margin-bottom: 20px;
 }
+.texto_contenedor h3 p{
+	color: #150f01 !important;
+}
+
 .texto_contenedor .resumen{
 	color: #140e00;
 	margin-bottom: 20px;
+	height: 116px;
 }  
+.texto_contenedor .resumen p{
+	color: #150f01;
+} 
+ 
+.texto_contenedor .resumen a,
+.texto_contenedor .resumen p a{
+	color: #2f7000;
+	font-weight: bold;
+	text-decoration: none;
+} 
+ 
+.texto_contenedor .resumen a:hover,
+.texto_contenedor .resumen p a:hover{
+	color: #fe4200;
+} 
+
+
 .texto_contenedor .resumen b,
 .texto_contenedor .resumen strong{
 	color: #2f7000;
@@ -1398,6 +1484,15 @@ label.error{
     color: #140E00;
     font-weight: bold;
     margin-bottom: 20px;
+}
+.texto_contenedor_completo h3 p{
+
+	color: #150F01 !important;
+}
+.texto_completo p{
+
+	color: #150F01 !important;
+
 }
 
 .texto_contenedor .leer_mas{
@@ -1428,9 +1523,9 @@ label.error{
 .paginador{
     border-bottom: 1px dashed #AEA591;
     border-top: 1px dashed #AEA591;
-    height: 56px;
-    margin: auto;
-    padding-top: 30px;
+    height: 44px;
+    margin: 0 auto 50px;
+    padding-top: 15px;
     width: 826px;
 }
 .arrows{
@@ -1531,7 +1626,7 @@ label.error{
 }
 .form_contactenos{
 	width: 570px;
-	margin: auto;
+	/*margin: auto;*/
     font-family: "Conv_MyriadPro-Regular";
 }
 .form_contactenos li{
@@ -1590,7 +1685,7 @@ label.error{
 
 .page.programas .contenido{
 	padding-top: 170px;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 .contenido_mapa{
     margin: auto;
@@ -1765,6 +1860,10 @@ div.tooltip .colita{
     width: 200px;
     display: none;
     z-index: 100;
+}
+.tooltip_map ul li{
+    font-family: arial;
+    font-size: 11px !important;
 }
 .rosad .tooltip_map{
 	width: 230px;
@@ -1994,6 +2093,7 @@ div.tooltip .colita{
 .page.proyecto .contenido{
 	padding-top: 170px;
 	margin-bottom: 20px;
+	background-image: none;
 }
 .contenido_proyecto{
     margin: auto;
@@ -2018,6 +2118,11 @@ div.tooltip .colita{
 .contenido_proyecto .columna_central{
 	width: 576px;
 }
+
+.contenido_proyecto .columna_central p{
+	text-align: justify;
+}
+
 .contenido_proyecto .columnas h5,
 .contenido_proyecto .columnas strong{
 	color: #85c923;
@@ -2031,8 +2136,8 @@ div.tooltip .colita{
 p{
     color: #ADA591;
     font-family: arial;
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 13px;
+    line-height: 1.5;
     margin-bottom: 15px;
 }
 .contenido_proyecto .columna_lateral li{
@@ -2053,6 +2158,7 @@ p{
 .page.concluidos .contenido{
 	padding-top: 170px;
 	margin-bottom: 20px;
+	background-image: none;
 }
 .contenido_concluidos{
     margin: auto;

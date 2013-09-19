@@ -1,0 +1,20 @@
+upstream whh {
+  server unix:///tmp/web.0.sock;
+  server unix:///tmp/web.1.sock;
+  server unix:///tmp/web.2.sock;
+}
+server {
+  listen   80;
+  server_name whh;
+
+  access_log /var/www/whh/log/access.log;
+  error_log  /var/www/whh/log/error.log;
+  root     /var/www/whh;
+  index    index.html;
+
+  location / {
+    proxy_pass http://whh;
+    #try_files /system/maintenance.html $uri $uri/index.html $uri.html @ruby;
+  }
+
+}

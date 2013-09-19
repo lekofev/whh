@@ -22,7 +22,8 @@
 						<% if bannerhome.visible %>
 					<div class="banner_items">
 						<div class="titulo">
-							<p class=""><%= bannerhome.titulo %> </p>
+							<p class="p_titulo"><%= bannerhome.titulo %> </p>
+							<p class="p_sub_titulo"><%= bannerhome.subtitulo %> </p>
 							<a href="<%= bannerhome.ver_mas_url %>" class="btns banner_ver_mas"></a>	
 						</div>						
 						<img src="<%= bannerhome.url_imagen %>">						
@@ -134,7 +135,7 @@
 							</div>
 							<h4><%= ultimas_noticias.fecha %></h4>
 							<p>
-								<%=  truncate(sanitize(ultimas_noticias.sub_titulo, :tags=>['']), :length=>100, :omission =>'...') %>
+								<%=  truncate(sanitize(ultimas_noticias.sub_titulo, :tags=>['']), :length=>90, :omission =>'') %>
 								<span>
 									<%= link_to("Leer más", {:controller=>'actualidades' ,:id=>ultimas_noticias.id}, :class => 'noticias_leer_mas') %>	
 								</span>
