@@ -17,8 +17,8 @@ class InicioController < ApplicationController
   	@tit_verde_perfil=e[1].to_s;
 
 
-	@bannerhome = Bannerhome.order("bannerhomes.z_index ASC")
-
+	# @bannerhome = Bannerhome.order("bannerhomes.z_index ASC")
+  @bannerhome = Bannerhome.where(:inicio_id=>@inicio.id).order("bannerhomes.z_index ASC")
 
   end
 
