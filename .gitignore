@@ -16,3 +16,4 @@
 
 #ignore mysqlpass
 /config/database.yml
+/config/Gemfile
