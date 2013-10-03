@@ -1,0 +1,67 @@
+<div class="page videos">	
+	<%= render(:partial => "compartido/header") %>
+	
+	<div class="contenido">
+
+		<div class="contenido_videos clear_block">
+			<div class="columnas columna_unica">
+
+			<% @publivideo.each do |publivideo| %>
+			
+				<div class="video_contendor clear_block">
+					<div class="video_blocks video_texto">
+						<h3 class="video_texto_titulo">
+							<%= publivideo.titulo %>
+						</h3>
+						<p>
+							<%= sanitize(publivideo.texto, :tags=>['br','strong','i','u','strong','p']) %>
+						</p>						
+					</div>
+					<div class="video_blocks video_video">
+						<iframe width="412" height="250" src="//www.youtube.com/embed/<%= publivideo.url_video %>" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+
+			<% end %>
+
+<!-- 
+
+				<div class="video_contendor clear_block">
+					<div class="video_blocks video_texto">
+						<h3 class="video_texto_titulo">
+							Consetetur sadipscing elitr
+						</h3>
+						<p>
+<b>Lorem ipsum dolor sit amet</b> , consetetur sadipscing elitr, <strong>sed diam nonumy eirmod </strong> tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+						</p>						
+					</div>
+					<div class="video_blocks video_video">
+						<iframe width="412" height="250" src="//www.youtube.com/embed/cXEZW_ZxT1Y" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="video_contendor clear_block">
+					<div class="video_blocks video_texto">
+						<h3 class="video_texto_titulo">
+							Consetetur sadipscing elitr
+						</h3>
+						<p>
+<b>Lorem ipsum dolor sit amet</b> , consetetur sadipscing elitr, <strong>sed diam nonumy eirmod </strong> tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+						</p>						
+					</div>
+					<div class="video_blocks video_video">
+						<iframe width="412" height="250" src="//www.youtube.com/embed/cXEZW_ZxT1Y" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>	 -->			
+ 								
+			</div>
+		</div>
+	</div>
+
+	<%= render(:partial => "compartido/footer") %>
+
+</div>

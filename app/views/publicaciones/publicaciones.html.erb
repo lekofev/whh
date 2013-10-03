@@ -55,7 +55,7 @@
 								<% @publivideo.each do |publivideo| %>
 									<% if publivideo.publicategori_id==publicategoria.id %>
 										<div class="btn_ver_video">
-											<a href="">
+											<a href="/videos/?id=<%= publicategoria.id %>">
 												<div class="ver_videos_de verde">VER VIDEOS DE</div>
 												<div class="programa_regional naranja">PROGRAMA REGIONAL SURAMERICA</div>	
 											</a>
