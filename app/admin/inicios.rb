@@ -3,36 +3,35 @@ ActiveAdmin.register Inicio do
 	config.filters = false
 	menu :priority => 1, :label => "Inicio"
 
-	  # sidebar :help do
-	  #       ul do
-		 #      li "Second List First Item"
-		 #      li "Second List Second Item"
-   #  		end
-	  # end
-
-	# sidebar :users, :only => :show do
-	#   render 'user'
-	# end
-
     sidebar "Banner pagina inicial",:only => :show do 
       ul do
         li link_to("Lista de imagenes de la pagina inicial", admin_inicio_bannerhomes_path(inicio))
-        # li link_to("Tickets", admin_inicio_bannerhome_path(inicio))
       end
     end
 
     form do |f|                         
-	    f.inputs "Admin DetailsLALAL" do       
-	      f.input :inicios_title_html
-	      f.input :inicios_titulo
-	      f.input :inicios_texto, :as=>:ckeditor 
-	      f.input :inicios_titulo_perfil          
-	      f.input :inicios_texto_perfil, :as=>:ckeditor                 
-	      f.input :inicios_url_video              
-	      f.input :inicios_copy_right 
+	    f.inputs "Inicio" do       
+	      # f.input :inicios_title_html, :label => "Titulo "
+	      f.input :inicios_titulo, :label => "Titulo "
+	      f.input :inicios_texto, :as=>:ckeditor , :label => "Resumen "
+	      f.input :inicios_titulo_perfil, :label => "Titulo perfil sudamerica "       
+	      f.input :inicios_texto_perfil, :as=>:ckeditor, :label => "Resumen"                        
+	      f.input :inicios_url_video, :label => "Video pagina inicial "              
+	      f.input :inicios_copy_right , :label => "infomracion pie pagina "
 	    end                               
     	f.actions
     end
+
+	# Inicio :as => :block do |Inicio|
+	# 	div :for => Inicio do
+	# 	  h2 auto_link(Inicio.inicios_titulo)
+	# 	  div do
+	# 	    simple_format Inicio.inicios_titulo
+	# 	  end
+	# 	end
+	# end
+
+
 
 	# show do
 	# attributes_table :inicios_title_html, :inicios_titulo, :inicios_texto

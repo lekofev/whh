@@ -3,7 +3,16 @@ ActiveAdmin.register Colabocategori do
  	belongs_to :colaboracion
     sidebar "colaboracion colaborasores ",:only => :show do 
       ul do
-        li link_to("Lista de CLABORDORESs", admin_colabocategori_colaboradors_path(colabocategori))
+        li link_to("Lista de colaboradores", admin_colabocategori_colaboradors_path(colabocategori))
       end
     end  
+
+
+    form do |f|                         
+	    f.inputs "Categoria de colaboradores" do                   
+	      f.input :colabo_categoria, :label => "Nombre de categoria de colaborador"
+	    end                               
+    	f.actions
+    end
+
 end

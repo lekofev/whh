@@ -1,6 +1,8 @@
 ActiveAdmin.register Proyect do
  	config.filters = false
 
+  menu :priority => 3, :label => "Nuestros Programas y Proyectos", :parent => 'Programas y Proyectos'
+
     sidebar "acordeon pagina inicial",:only => :show do 
       ul do
         li link_to("Lista de org socias", admin_proyect_orgsocs_path(proyect))
