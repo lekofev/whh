@@ -3,7 +3,7 @@ ActiveAdmin.register Publicategori do
 	belongs_to :publicacion
 
   
-    sidebar "lisat de publicacionesl",:only => :show do 
+    sidebar "Lista de publicaciones",:only => :show do 
       ul do
         li link_to("Lista de archivos", admin_publicategori_publiarchivos_path(publicategori))
         li link_to("Lista de videos", admin_publicategori_publivideos_path(publicategori))
@@ -11,9 +11,16 @@ ActiveAdmin.register Publicategori do
     end
 
      form do |f|                         
-	    f.inputs "Publi categoria DetailsLALAL" do                   
-        f.input :publi_categoria   
+	    f.inputs "Categoria de publicaciones" do                   
+        f.input :publi_categoria, :label =>"Nombre de categoria" 
 	    end                               
     	f.actions
     end
+
+    index do
+        column "Nombre de categoria", :publi_categoria
+        actions
+    end
+
+
 end

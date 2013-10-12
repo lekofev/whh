@@ -11,15 +11,21 @@ ActiveAdmin.register About do
     end
 
     form do |f|                         
-	    f.inputs "Quienes Somos" do                   
-        # f.input :visible, :label => "Publicado?"
+	    f.inputs "Quienes Somos" do                 
 	      f.input :titulo, :label => "Titulo "
 	      f.input :texto, :as=>:ckeditor , :label => "Texto"
+          f.input :enlace, :label => "Nombre de enlace"
 	      f.input :url_imagen, :label => "Imagen"
-	      f.input :alt_imagen  , :label => "Titulo de la imagen "
-        # f.input :enlace, :label => "Titulo menu lateral"
-        # f.input :orden, :label => "Titulo "
+	      f.input :alt_imagen  , :label => "Titulo de la imagen"
+          f.input :orden  , :label => "Preferencia"
 	    end                               
     	f.actions
+    end
+
+    index do
+        column "Titulo", :titulo
+        column "Nombre de enlace", :enlace
+        column "Preferencia", :orden
+        actions
     end
 end

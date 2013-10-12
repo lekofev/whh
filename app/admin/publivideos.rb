@@ -3,12 +3,19 @@ ActiveAdmin.register Publivideo do
 	belongs_to :publicategori
 
      form do |f|                         
-	    f.inputs "Publicacion DetailsLALAL" do  
-	      f.input :titulo
-	      f.input :texto, :as=>:ckeditor 
-	      f.input :url_video
+	    f.inputs "Videos" do  
+	      f.input :titulo, :label =>"Titulo"     
+	      f.input :texto, :as=>:ckeditor , :label =>"Texto"    
+	      f.input :url_video, :label =>"Video"     
 	    end                               
     	f.actions
+    end
+
+    index do
+        column "Titulo", :titulo
+        # column "Texto", :texto
+        column "Video", :url_video
+        actions
     end
   
 end

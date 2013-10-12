@@ -19,5 +19,16 @@ ActiveAdmin.register Actualidad do
 	    end                               
     	f.actions
     end
+
+    index do
+        column "Fecha de publicacion", :fecha
+        column "Titulo", :titulo
+        column "Mostrar en pagina inicial?", :mostrar_en_home
+        column "Publicado?", :visible
+
+        actions
+    end
+
+
   
 end

@@ -19,6 +19,14 @@ ActiveAdmin.register Colaboracion do
 	    end                               
     	f.actions
     end
+
+    index do
+        column "Titulo", :titulo
+        column "Texto", :texto
+        actions
+    end
+
+
 end
 
 

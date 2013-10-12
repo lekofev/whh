@@ -10,7 +10,7 @@ ActiveAdmin.register Publicacion do
     end
 
     form do |f|                         
-	    f.inputs "Publicacion DetailsLALAL" do                   
+	    f.inputs "Publicaciones" do                   
         # f.input :visible , :label => "Titulo "    
 	      f.input :titulo, :label => "Titulo"
 	      f.input :texto, :as=>:ckeditor , :label => "Texto"
@@ -21,5 +21,13 @@ ActiveAdmin.register Publicacion do
     	f.actions
     end
 
+    index do
+        column "Titulo", :titulo
+        column "Texto", :texto
+        column "Texto de bajada", :bajada
+        column "Imagen", :url_imagen
+        column "Titulo de la imagen", :alt_imagen
+        actions
+    end
 
 end

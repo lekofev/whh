@@ -12,4 +12,10 @@ ActiveAdmin.register Colaborador do
     	f.actions
     end
   
+    index do
+        column "Nombre del colaborador", :nombre_colaborador
+        column "Url a su pagina web", :url_pagina_web
+        actions
+    end
+
 end

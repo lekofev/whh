@@ -15,4 +15,8 @@ ActiveAdmin.register Colabocategori do
     	f.actions
     end
 
+    index do
+        column "Nombre de categoria de colaborador", :colabo_categoria
+        actions
+    end
 end

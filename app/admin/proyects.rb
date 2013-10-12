@@ -11,14 +11,23 @@ ActiveAdmin.register Proyect do
     end
 
     form do |f|                         
-	    f.inputs "Publicacion DetailsLALAL" do                   
-       	      
-	      f.input :titulo    
-	      f.input :texto_central, :as=>:ckeditor 
-	      f.input :fecha
-	      f.input :localidad
-	      f.input :grupo_meta  
+	    f.inputs "Publicaciones" do
+	      f.input :titulo, :label => "Titulo"  
+	      f.input :texto_central, :as=>:ckeditor , :label => "Texto"  
+	      f.input :fecha, :label => "Fecha del proyecto"  
+	      f.input :localidad, :label => "Localidades"  
+	      f.input :grupo_meta  , :label => "Grupo objetivo"  
 	    end                               
     	f.actions
     end
+
+    index do
+        column "Titulo", :titulo
+        # column "Texto", :texto_central
+        column "Fecha del proyecto", :fecha
+        column "Localidad", :localidad
+        column "Grupo objetivo", :grupo_meta
+        actions
+    end
+
 end
