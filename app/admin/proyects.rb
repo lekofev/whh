@@ -21,7 +21,7 @@ ActiveAdmin.register Proyect do
     	f.actions
     end
 
-    index do
+    index :title => "Programas y proyectos" do
         column "Titulo", :titulo
         # column "Texto", :texto_central
         column "Fecha del proyecto", :fecha
@@ -29,5 +29,17 @@ ActiveAdmin.register Proyect do
         column "Grupo objetivo", :grupo_meta
         actions
     end
+
+
+    show :title => :titulo do |ad|
+      attributes_table do
+        row :titulo
+        row :texto_central
+        row :fecha
+        row :localidad
+        row :grupo_meta
+      end
+    end
+
 
 end

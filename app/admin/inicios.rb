@@ -24,7 +24,7 @@ ActiveAdmin.register Inicio do
 
 
 
-	  index do
+	  index :title => "Pagina de inicio" do
 	    column "Titulo", :inicios_titulo
 	    column "Resumen", :inicios_texto
 	    column "Perfil sudamerica", :inicios_titulo_perfil
@@ -33,5 +33,17 @@ ActiveAdmin.register Inicio do
 	    column "Texto de pie de pagina", :inicios_copy_right
 	    actions
 	  end
+
+    show :title => "Pagina de inicio" do |ad|
+      attributes_table do
+        row :inicios_titulo
+        row :inicios_texto
+        row :inicios_titulo_perfil
+        row :inicios_texto_perfil
+        row :inicios_url_video
+        row :inicios_copy_right
+      end
+    end
+
 
 end

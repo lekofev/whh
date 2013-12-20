@@ -15,8 +15,25 @@ ActiveAdmin.register Colabocategori do
     	f.actions
     end
 
-    index do
+    index :title => "Categoria" do
         column "Nombre de categoria de colaborador", :colabo_categoria
         actions
     end
+
+    # show :title => :colabo_categoria do |ad|
+    #   attributes_table do
+    #     row 'Nombre de categoria de colaborador' do
+    #         :colabo_categoria
+    #     end
+    #   end
+    # end
+
+    show :title => :colabo_categoria do |ad|
+      attributes_table do
+        row :colabo_categoria
+      end
+    end
+
+
+
 end

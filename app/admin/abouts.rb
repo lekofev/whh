@@ -22,10 +22,23 @@ ActiveAdmin.register About do
     	f.actions
     end
 
-    index do
+    index :title => "Quienes Somos" do
         column "Titulo", :titulo
         column "Nombre de enlace", :enlace
         column "Preferencia", :orden
         actions
     end
+
+    show :title => :titulo  do |ad|
+      attributes_table do
+        row :titulo
+        row :texto
+        row :enlace
+        row :url_imagen
+        row :alt_imagen
+        row :orden
+      end
+    end
+
+
 end

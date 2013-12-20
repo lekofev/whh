@@ -21,13 +21,23 @@ ActiveAdmin.register Publicacion do
     	f.actions
     end
 
-    index do
+    index :title => "Publicaciones" do
         column "Titulo", :titulo
         column "Texto", :texto
         column "Texto de bajada", :bajada
         column "Imagen", :url_imagen
         column "Titulo de la imagen", :alt_imagen
         actions
+    end
+
+    show :title => :titulo do |ad|
+      attributes_table do
+        row :titulo
+        row :texto
+        row :bajada
+        row :url_imagen
+        row :alt_imagen
+      end
     end
 
 end

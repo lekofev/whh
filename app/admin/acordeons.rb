@@ -10,10 +10,16 @@ ActiveAdmin.register Acordeon do
 		f.actions
 	end
 
-    index do
+    index :title => "Lista de acordeon" do
         column "Titulo de acordeon", :titulo
         actions
     end
 
+    show :title => :titulo  do |ad|
+      attributes_table do
+        row :titulo
+        row :texto
+      end
+    end
 
 end

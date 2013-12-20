@@ -17,10 +17,15 @@ ActiveAdmin.register Publicategori do
     	f.actions
     end
 
-    index do
+    index :title => "Lista de categorias" do
         column "Nombre de categoria", :publi_categoria
         actions
     end
 
+    show :title => "Categoria" do |ad|
+      attributes_table do
+        row :publi_categoria
+      end
+    end
 
 end

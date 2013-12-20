@@ -12,10 +12,20 @@ ActiveAdmin.register Colaborador do
     	f.actions
     end
   
-    index do
+    index :title => "Colaboradores" do
         column "Nombre del colaborador", :nombre_colaborador
         column "Url a su pagina web", :url_pagina_web
         actions
     end
+
+    show :title => :nombre_colaborador do |ad|
+      attributes_table do
+        row :url_logo_img
+        row :alt_logo_img
+        row :nombre_colaborador
+        row :url_pagina_web
+      end
+    end
+
 
 end

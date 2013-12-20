@@ -20,7 +20,7 @@ ActiveAdmin.register Actualidad do
     	f.actions
     end
 
-    index do
+    index :title => "Actualidades" do
         column "Fecha de publicacion", :fecha
         column "Titulo", :titulo
         column "Mostrar en pagina inicial?", :mostrar_en_home
@@ -29,6 +29,21 @@ ActiveAdmin.register Actualidad do
         actions
     end
 
+    show :title => "Actualidad" do |ad|
+      attributes_table do
+        row :titulo
+        row :fecha
+        row :sub_titulo
+        row :resumen
+        row :texto_completo
+        row :url_imagen_grande
+        row :alt_imagen_grande
+        row :url_imagen_chica
+        row :alt_imagen_chica
+        row :mostrar_en_home
+        row :visible
+      end
+    end
 
   
 end

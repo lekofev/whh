@@ -12,12 +12,19 @@ ActiveAdmin.register Pconcluido do
 	end	
   
 
-    index do
+    index  :title => "Proyectos concluidos" do
         column "Titulo", :titulo
         column "Archivo Pdf", :url_pdf
         actions
     end
 
+
+    show :title => :titulo do |ad|
+      attributes_table do
+        row :titulo
+        row :url_pdf
+      end
+    end
 
 
 end

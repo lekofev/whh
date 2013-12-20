@@ -9,7 +9,7 @@ ActiveAdmin.register Colaboracion do
     end
 
     form do |f|                         
-	    f.inputs "colabora lista DetailsLALAL" do                   
+	    f.inputs "Editar Colaboraciones" do                   
         # f.input :visible       
 	      f.input :titulo, :label => "Titulo"
 	      f.input :texto, :as=>:ckeditor , :label => "Texto"
@@ -20,13 +20,21 @@ ActiveAdmin.register Colaboracion do
     	f.actions
     end
 
-    index do
+    index :title => "Colaboraciones" do
         column "Titulo", :titulo
         column "Texto", :texto
         actions
     end
 
-
+    show :title => :titulo do |ad|
+      attributes_table do
+        row :titulo
+        row :texto
+        row :bajada
+        row :url_imagen
+        row :alt_imagen
+      end
+    end
 end
 
 

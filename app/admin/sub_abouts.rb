@@ -16,10 +16,23 @@ ActiveAdmin.register SubAbout do
     	f.actions
     end
 
-    index do
+    index :title => "Perfiles" do
         column "Titulo", :titulo
         column "Sub-titulo", :sub_titulo
         column "Preferencia", :orden
         actions
     end
+
+    show :title => :titulo  do |ad|
+      attributes_table do
+        row :titulo
+        row :sub_titulo
+        row :texto
+        row :url_imagen
+        row :alt_imagen
+        row :enlace
+        row :orden
+      end
+    end
+
 end
