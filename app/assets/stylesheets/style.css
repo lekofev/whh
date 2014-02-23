@@ -257,6 +257,7 @@ label.error{
 	margin-top: 40px;
 	text-align: right;
 	margin-bottom: 5px;
+	visibility: hidden;
 
 }
 .redes_sociales_header .menu_redes_sociales_header a{
@@ -374,6 +375,7 @@ label.error{
 }
 .buscador input{
 	float: right;
+	display: none;
 }
 .input_buscador{
 	width: 140px;
@@ -416,13 +418,17 @@ label.error{
 	width: 100%;
 	overflow: hidden;
 	height: 530px;
-
+	min-width: 960px;
+	position: relative;
 }
 .banner_home{
 	height: 530px;
 	width: 1366px;
-	position: relative;
-	margin: auto;
+	position: absolute;
+	/*margin: auto;*/
+	left: 50%;
+	top: 0;
+	margin-left: -683px;
 	/*display: none;*/
 }
 .banner_home_cycle{
@@ -660,6 +666,10 @@ label.error{
     box-shadow:  2px 2px 8px -4px;
 	margin-bottom: 15px;
 }
+.noticia_home_img:hover{
+	border: 3px solid #B04103;
+
+}
 .noticia_home_img img{
 	width: 255px;
 	height: 83px;
@@ -678,12 +688,12 @@ label.error{
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 1.2;
+	margin-bottom: 2px;
 }
 .noticias_leer_mas{
     color: #B04103;
     font-size: 12px;
     font-weight: bold;
-    padding-left: 11px;
     padding-right: 20px;
     text-decoration: underline;
     background-image: url(/assets/fl_leer_mas.png);
@@ -694,7 +704,9 @@ label.error{
     color: #2f6f00;
     background-position: right -14px;
 }
+.link_leer_mas{
 
+}
 .ultimos_proyectos{
 	width: 870px;
 	margin: 0 auto;
